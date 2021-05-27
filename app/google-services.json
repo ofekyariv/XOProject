@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "1025680017984",
+    "firebase_url": "https://xoproject-8120b-default-rtdb.firebaseio.com",
+    "project_id": "xoproject-8120b",
+    "storage_bucket": "xoproject-8120b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025680017984:android:359b8bf825b458ff3d2da5",
+        "android_client_info": {
+          "package_name": "tal.XOProject.splashscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025680017984-bp388e495idtijoim3akd9qd9uhopo2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV8XourS01cROf7PLcoCyaomF-nvP5njo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025680017984-bp388e495idtijoim3akd9qd9uhopo2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025680017984:android:20430206ae5a50193d2da5",
+        "android_client_info": {
+          "package_name": "tal.XOProject.tictactoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025680017984-bp388e495idtijoim3akd9qd9uhopo2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV8XourS01cROf7PLcoCyaomF-nvP5njo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025680017984-bp388e495idtijoim3akd9qd9uhopo2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

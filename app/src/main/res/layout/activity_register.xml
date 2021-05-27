@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Registration"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="USERNAME"
+        android:gravity="center"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPersonName"
+        android:layout_marginTop="20dp"
+        android:id="@+id/user2"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="EMAIL"
+        android:gravity="center"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="20dp"
+        android:id="@+id/email2"/>
+    <LinearLayout
+        android:id="@+id/genderlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email2"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtgender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="your gender is: "
+            android:fontFamily="sans-serif-light"
+            android:layout_margin="5dp"
+            android:textSize="25sp"/>
+        <RadioGroup
+            android:id="@+id/rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <RadioButton
+                android:id="@+id/maleBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="30sp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <RadioButton
+                android:id="@+id/femaleBt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="30sp"
+                />
+        </RadioGroup>
+    </LinearLayout>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="PASSWORD"
+        android:gravity="center"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPassword"
+        android:layout_marginTop="20dp"
+        android:id="@+id/password2"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="PHONE NUMBER"
+        android:gravity="center"
+        android:layout_marginRight="80dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="phone"
+        android:layout_marginTop="20dp"
+        android:id="@+id/phone2"/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Register"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:id="@+id/reg2"
+        android:text="Already Registered? Click To Log In"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+</LinearLayout>

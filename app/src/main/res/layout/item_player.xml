@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <ImageView
+        android:id="@+id/imgPlayer"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/male"/>
+
+    <TextView
+        android:id="@+id/tvPlayerUN"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/imgPlayer"
+        android:text="USERNAME"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvPlayerVQ"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/imgPlayer"
+        android:layout_below="@id/tvPlayerUN"
+        android:text="Victory Quote"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_toRightOf="@id/imgPlayer"
+        android:layout_below="@id/tvPlayerVQ"
+        android:text="Score"
+        android:gravity="center"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
