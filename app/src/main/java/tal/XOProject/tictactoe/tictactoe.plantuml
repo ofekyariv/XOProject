@@ -1,0 +1,271 @@
+@startuml
+
+title __TICTACTOE's Class Diagram__\n
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.BackgroundSoundService {
+        ~ player : MediaPlayer
+        + onBind()
+        + onCreate()
+        + onDestroy()
+        + onLowMemory()
+        + onStartCommand()
+        + onUnBind()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Controller {
+        - player : char
+        + Controller()
+        + checkEmptyPlace()
+        + checkforwinner()
+        + getPlayer()
+        + getWinner()
+        + startGame()
+        + userSelect()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Forgot_pass {
+        - email_et : EditText
+        - email_string : String
+        - firebaseAuth : FirebaseAuth
+        - send_password_reset_btn : Button
+        + validate()
+        # onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.GameOverActivity {
+        ~ gender : String
+        ~ userName : String
+        ~ victoryQuote : String
+        {static} - REQ_CODE_SPEECH_INPUT : int
+        - btnsave : Button
+        - etVictoryQuote : EditText
+        - firebaseAuth : FirebaseAuth
+        - mic : ImageButton
+        - txtwinner : TextView
+        + save()
+        + startover()
+        # onActivityResult()
+        # onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.ListActivity {
+        - listView : ListView
+        - players : ArrayList<Player>
+        + onItemLongClick()
+        + toMain()
+        # onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.LoginActivity {
+        - firebaseAuth : FirebaseAuth
+        - forgot : TextView
+        - loginbtn : Button
+        - textView : TextView
+        - useremail : EditText
+        - userpassword : EditText
+        # onCreate()
+        - validate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.MainActivity {
+        {static} - GAME_OVER : int
+        - imageView : ImageView
+        - llmain : LinearLayout
+        - tts : TextToSpeech
+        - txtmode : TextView
+        + changeMode()
+        + newGame()
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        + select()
+        + startAlert()
+        + startGame()
+        + stopAlert()
+        # onActivityResult()
+        # onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.ModeSelectActivity {
+        {static} + mode : int
+        + pcvp()
+        + pvp()
+        # onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Model {
+        - SIZE : int
+        - board : char[][]
+        - counter : int
+        - winner : char
+        + Model()
+        + gameOver()
+        + getWinner()
+        + isEmptyPlace()
+        + setPlace()
+        + startGame()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.MyBroadcastReceiver {
+        + onReceive()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Player {
+        - gender : String
+        - id : long
+        - name : String
+        - score : int
+        - victoryQuote : String
+        + Player()
+        + Player()
+        + addScore()
+        + compareTo()
+        + getGender()
+        + getId()
+        + getName()
+        + getScore()
+        + getVictoryQuote()
+        + setGender()
+        + setId()
+        + setName()
+        + setScore()
+        + setVictoryQuote()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.PlayerAdapter {
+        - context : Context
+        - list : ArrayList<Player>
+        + PlayerAdapter()
+        + getView()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.PlayerDataBase {
+        {static} - COLUMN_GENDER : String
+        {static} - COLUMN_ID : String
+        {static} - COLUMN_NAME : String
+        {static} - COLUMN_SCORE : String
+        {static} - COLUMN_VICTORYQUOTE : String
+        {static} - CREATE_TABLE_CUSTOMER : String
+        {static} - DATABASENAME : String
+        {static} - DATABASEVERSION : int
+        {static} - TABLE_RECORD : String
+        {static} - allColumns : String[]
+        - database : SQLiteDatabase
+        {static} - players : ArrayList<Player>
+        + PlayerDataBase()
+        + createRecord()
+        + deletePlayerByRow()
+        {static} + getPlayers()
+        + onCreate()
+        + onUpgrade()
+        {static} + setPlayers()
+        + setRecord()
+        + updateByRow()
+        - getAllRecords()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Register {
+        - firebaseAuth : FirebaseAuth
+        - gender : String
+        - id : int
+        - radioGroup : RadioGroup
+        - rbmale : RadioButton
+        - regButton : Button
+        - useremail : EditText
+        - userlogin : TextView
+        - username : EditText
+        - userpassword : EditText
+        - userphone : EditText
+        # onCreate()
+        - sendUserData()
+        - validate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.SplashScreen {
+        + onCreate()
+    }
+  }
+  
+
+  namespace tal.XOProject.tictactoe {
+    class tal.XOProject.tictactoe.Userprofile {
+        + email : String
+        + gender : String
+        + name : String
+        + password : String
+        + phone : String
+        + Userprofile()
+    }
+  }
+  
+
+  tal.XOProject.tictactoe.BackgroundSoundService -up-|> android.app.Service
+  tal.XOProject.tictactoe.Controller o-- tal.XOProject.tictactoe.Model : model
+  tal.XOProject.tictactoe.Forgot_pass -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.GameOverActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.ListActivity .up.|> android.widget.AdapterView.OnItemLongClickListener
+  tal.XOProject.tictactoe.ListActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.ListActivity o-- tal.XOProject.tictactoe.PlayerAdapter : adapter
+  tal.XOProject.tictactoe.ListActivity o-- tal.XOProject.tictactoe.PlayerDataBase : playerDataBase
+  tal.XOProject.tictactoe.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.MainActivity o-- tal.XOProject.tictactoe.Controller : controller
+  tal.XOProject.tictactoe.ModeSelectActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.MyBroadcastReceiver -up-|> android.content.BroadcastReceiver
+  tal.XOProject.tictactoe.Player .up.|> java.lang.Comparable
+  tal.XOProject.tictactoe.PlayerAdapter -up-|> android.widget.ArrayAdapter
+  tal.XOProject.tictactoe.PlayerDataBase -up-|> android.database.sqlite.SQLiteOpenHelper
+  tal.XOProject.tictactoe.Register -up-|> androidx.appcompat.app.AppCompatActivity
+  tal.XOProject.tictactoe.SplashScreen -up-|> androidx.appcompat.app.AppCompatActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

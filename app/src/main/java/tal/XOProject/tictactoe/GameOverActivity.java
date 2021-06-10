@@ -32,7 +32,6 @@ import static tal.XOProject.tictactoe.ModeSelectActivity.mode;
 
 public class GameOverActivity extends AppCompatActivity {
 
-
     private EditText etVictoryQuote;
     private TextView txtwinner;
     private ImageButton mic;
